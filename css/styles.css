@@ -1,0 +1,789 @@
+/* Basic setup for body and layout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+}
+
+/* Navigation Bar Styling */
+header {
+    background: linear-gradient(145deg, #333, #111);
+    padding: 1rem 2rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styling */
+nav h1 a{
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+nav h1:hover {
+    transform: translateY(-3px);
+}
+
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(145deg, #444, #222);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for links */
+nav ul li a:hover {
+    background: linear-gradient(145deg, #555, #333);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Mobile Menu Toggle (Hamburger Icon) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle span {
+    background: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 4px;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Rotate icon when active */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+    /* Hide navigation links by default on mobile */
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #222;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+        border-radius: 0 0 8px 8px;
+        z-index: 1000;
+    }
+
+    #nav-links li {
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+
+
+    /* Show the menu toggle (hamburger) on mobile */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Show the navigation links when active */
+    #nav-links.active {
+        display: flex;
+    }
+}
+
+
+/* Main Content */
+/* Main Section Styling */
+a{
+    text-decoration: none;
+    color: white;
+}
+main {
+    padding: 0.2rem;
+    margin: auto;
+}
+.headings{
+    font-size: 3.5rem;
+    margin: 1rem 0;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.headings2{
+    font-size: 1.2rem;
+    color: #555;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .headings {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 480px) {
+    .headings{
+        font-size: 1.8rem;
+    }
+}
+/* My Info Section - Desktop */
+#myinfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+    height: 50rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Image Styling */
+.info-image img {
+    width: 350px;
+    height: 400px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.info-image img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Text and Button Styling */
+.info-text {
+    text-align: center;
+    margin-left: 2rem;
+}
+
+.info-text h3 {
+    color: gray;
+}
+
+.info-text button {
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(145deg, #444, #222);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for links */
+.info-text button:hover {
+    background: linear-gradient(145deg, #555, #333);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+/* Icon Styling */
+.i {
+    margin-top: 20px;
+}
+.info-text i {
+    margin: 0 0.5rem;
+    font-size: 1.8rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.info-text i:hover {
+    /* background: linear-gradient(145deg, #555, #333); */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(+3px);
+}
+
+/* Responsive adjustments for tablets */
+@media (max-width: 768px) {
+    #myinfo {
+        margin-top: 5rem;
+        flex-direction: column;
+        height: 50rem;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .info-image img {
+        width: 70%;
+        height: auto;
+        margin-bottom: 1.5rem;
+    }
+
+    .info-text {
+        margin-left: 0;
+    }
+
+
+    .info-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .info-text button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .info-text i {
+        font-size: 1.5rem;
+    }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 480px) {
+    #myinfo {
+        margin-top: 5rem;
+        padding: 1rem;
+        height: 45rem;
+    }
+
+    .info-image img {
+        width: 100%;
+    }
+
+    .info-text h3 {
+        font-size: 1rem;
+    }
+
+    .info-text button {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .info-text i {
+        font-size: 1.3rem;
+    }
+}
+
+
+/* About Section */
+/* General layout styling */
+/* General layout styling */
+#about {
+    /* padding: 3rem 1rem; */
+    text-align: center;
+}
+
+
+/* Flex container for desktop layout */
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+/* Styling for image */
+.info-image1 img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.info-image1 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Text content styling */
+.about-text {
+    flex: 1;
+    text-align: left;
+    color: #333;
+}
+
+.about-e {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    justify-content: start;
+}
+
+.about-e1 {
+    border: 1px solid #444242;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 100%;
+    max-width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.about-e1:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.about-e1 h3 {
+    font-size: 1.3rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.about-e1 p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Main about text */
+.about-text > div:last-child {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info-image img {
+        max-width: 80%; /* Scale image on smaller screens */
+        margin-bottom: 2rem;
+    }
+
+    .about-e {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-e{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+        gap: 1rem;
+
+    }
+    .about-e1 h3 {
+        font-size: 1.2rem;
+    }
+
+    .about-e1 p, .about-text p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* General styling for the Education section */
+/* General styling for the Education section */
+#education {
+    padding: 1rem 0.1rem;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 5rem auto;
+}
+
+
+/* Flex container for education cards */
+.educ {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* Education card styling */
+.education-card {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 2rem 0.5rem;
+    flex: 1 1 30%; /* Responsive flex-basis for desktop (about 30% width) */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.education-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.education-card h3 {
+    font-size: 1.8rem;
+    color: #111;
+    margin-bottom: 0.5rem;
+}
+
+.program {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.dates {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .education-card {
+        flex: 1 1 100%; /* Full width on small screens */
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .educ {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+    }
+
+    .education-card {
+        flex: 1 1 100%; /* Full width on small screens */
+        max-width: 100%;
+    }
+
+
+}
+
+
+
+
+/* General styling for the experience section */
+#experience {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.experience-container {
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px solid black;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.experience-container h3 {
+    font-size: 1.8rem;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* Grid layout for skills */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+/* Skill card styling */
+.skill {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    max-width: 180px;
+    flex: 1 1 180px;
+}
+
+.skill .icon {
+    font-size: 1.2rem;
+    color: #333;
+    margin-right: 0.5rem;
+}
+
+.skill strong {
+    display: block;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.skill p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skills-grid {
+        gap: 0.5rem;
+    }
+
+    .experience-container {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #experience {
+        padding: 1px;
+    }
+    .experience-container {
+        padding: 5px;
+    }
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .skill {
+        max-width: 100%;
+        flex: 1 1 auto;
+    }
+}
+@media (max-width: 340px) {
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0.5rem;
+    }
+    .skill {
+        justify-content: center;
+    }
+
+}
+
+/* General section styling */
+#Achievements,#projects {
+    margin-top: 5rem;
+    width: 100%;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+/* Project container */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Project card styling */
+.project-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    max-width: 400px;
+    padding: 1rem;
+    transition: transform 0.3s;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Buttons styling */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.button {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: #333;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Hover effect on project card */
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 868px) {
+    /* .project-container {
+        flex-direction: column;
+        align-items: center;
+    } */
+    .project-container {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+    }
+
+    .project-card  {
+        flex: 1 1 100%; /* Full width on small screens */
+        max-width: 100%;
+    }
+
+
+}
+
+/* General section styling */
+/* General Section Styling */
+#contact {
+    text-align: center;
+    padding: 4rem 1.5rem;
+    border-radius: 12px;
+    max-width: 700px;
+    margin: 2rem auto;
+}
+#contact h3{
+    color: gray;
+    padding: 1rem;
+}
+
+
+/* Contact Information Styling */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    padding: 0.8rem 1rem;
+    background-color: #444;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-item:hover {
+    background-color: #222;
+    transform: translateY(-3px);
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.contact-item a,
+.contact-item p {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #ccc;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    #contact {
+        padding: 2rem 1rem;
+    }
+
+    #contact h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-item {
+        font-size: 1rem;
+    }
+}
+
+
+
+footer{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
