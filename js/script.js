@@ -25,3 +25,11 @@ navLinksItems.forEach(link => {
     menuToggle.classList.remove('active');
   });
 });
+
+
+function downloadPDF() {
+  const link = document.createElement("a");
+  link.href = "assets/documents/varadpawar_FullStackDeveloper.pdf";
+  link.download = "varadpawar_FullStackDeveloper.pdf";
+  link.click();
+}
