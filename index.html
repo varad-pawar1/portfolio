@@ -48,7 +48,13 @@
           <button><a href="#contact">Contact Info</a></button>
           <a href="assets/documents/varadpawar_FullStackDeveloper.pdf" 
             target="_blank" 
-            download="Varad_Pawar_Resume.pdf">
+            rel="noopener noreferrer"
+            onclick="
+              var a = document.createElement('a');
+              a.href = this.href;
+              a.download = 'Varad_Pawar_Resume.pdf';
+              a.click();
+            ">
             <button>Download Resume</button>
           </a>
           <div class="i">
@@ -503,12 +509,18 @@
       <div style="text-align:center; margin-top: 20px;">
         <a href="assets/documents/varadpawar_FullStackDeveloper.pdf" 
           target="_blank" 
-          download="Varad_Pawar_Resume.pdf">
+          rel="noopener noreferrer"
+          onclick="
+            var a = document.createElement('a');
+            a.href = this.href;
+            a.download = 'Varad_Pawar_Resume.pdf';
+            a.click();
+          ">
           <button>Download Resume</button>
         </a>
       </div>
     </section>
-    
+
   </main>
 
   <footer>
