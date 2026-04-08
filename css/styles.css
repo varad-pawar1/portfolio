@@ -523,7 +523,7 @@ main {
 
 
 /* General styling for the experience section */
-#experience {
+#experience,#skills {
     text-align: center;
     padding: 2rem 1rem;
 }
@@ -797,3 +797,46 @@ footer{
     line-height: 1.5;
   }
   
+
+#resume {
+    text-align: center;
+    padding: 4rem 1.5rem;
+    max-width: 700px;
+    margin: 2rem auto;
+}
+
+#resume h3 {
+    color: gray;
+    padding: 1rem;
+}
+
+#resume button {
+    margin-top: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(145deg, #444, #222);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#resume button:hover {
+    background: linear-gradient(145deg, #555, #333);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 480px) {
+    #resume {
+        padding: 2rem 1rem;
+    }
+
+    #resume button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.5rem;
+    }
+}
